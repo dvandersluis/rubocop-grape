@@ -1,0 +1,16 @@
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Metrics/BlockLength:
+  Exclude:
+  - spec/**/*_spec.rb
+
+Metrics/LineLength:
+  Max: 150
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashSyntax:
+  Exclude:
+  - Rakefile
