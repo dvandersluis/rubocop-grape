@@ -1,5 +1,30 @@
 # Grape
 
+## Grape/EmptyRequestPath
+
+Enabled by default | Supports autocorrection
+--- | ---
+Enabled | Yes
+
+This cop finds request blocks with an empty string as the path, which
+can be left out.
+
+### Examples
+
+```ruby
+# bad
+post '' do
+end
+
+# good
+post do
+end
+
+# good
+post 'path' do
+end
+```
+
 ## Grape/StatusNoContent
 
 Enabled by default | Supports autocorrection
