@@ -4,9 +4,17 @@ Layout/EndAlignment:
 Metrics/BlockLength:
   Exclude:
   - spec/**/*_spec.rb
+  - Rakefile
+  - '**/*.rake'
 
 Metrics/LineLength:
   Max: 150
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
 
 Style/Documentation:
   Enabled: false

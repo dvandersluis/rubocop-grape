@@ -1,3 +1,8 @@
 Grape:
+  Enabled: true
   Include:
     - app/api/**/*.rb
+
+Grape/MissingDesc:
+  RequireForResources: true
+  TopLevel: true

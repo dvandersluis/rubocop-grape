@@ -18,10 +18,12 @@ module RuboCop
       #   post 'path' do
       #   end
       class EmptyRequestPath < Cop
+        include Request
+
         MSG = 'Do not pass a blank path to `%<method>s`.'.freeze
 
         def_node_matcher :empty_request_path?, <<-PATTERN
-          (send nil? {:get :post :put :head :delete :options :patch} (str #blank_string?) ...)
+          (send nil? #request_method? (str #blank_string?) ...)
         PATTERN
 
         def on_send(node)
